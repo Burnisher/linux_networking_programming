@@ -19,8 +19,8 @@ int main(int argc, const char *argv[])
    //2. conncet
     struct sockaddr_in  peeraddr;
     peeraddr.sin_family = AF_INET;
-    peeraddr.sin_addr.s_addr = inet_addr("192.168.1.14");
-    peeraddr.sin_port = htons(8976);
+    peeraddr.sin_addr.s_addr = inet_addr("192.168.1.15");
+    peeraddr.sin_port = htons(9981);
     if(connect(peerfd, (struct sockaddr*)&peeraddr, sizeof(peeraddr)) == -1)
         ERR_EXIT("connect");
  

@@ -16,4 +16,4 @@ $(BIN):$(OBJS)
 %.o:%.cpp
 	$(CC) $(CFLAGS) -c $< -o $@
 clean:
-	rm -f *.o $(BIN) core tiny
+	rm -f *.o $(BIN) core -r tiny

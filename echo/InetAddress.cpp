@@ -47,6 +47,13 @@ uint16_t InetAddress::toPort() const
 {
 	return ntohs(addr_.sin_port);
 }
+
+std::string InetAddress::toIpPort() const
+{
+	char text[100];
+	snprintf(text, sizeof text, "%s:%d", toIp().c_str(), toPort());
+	return text;
+}
  
 }
  
